@@ -11,7 +11,7 @@ export type MenuItem = {
   // in-store and drift over time.
   price?: string;
   tags?: DietaryTag[];
-  image?: (typeof placeholderImages)[keyof typeof placeholderImages];
+  image?: { src: string; alt: string; credit?: string };
   featured?: boolean;
 };
 
@@ -31,14 +31,14 @@ export const menu: MenuCategory[] = [
         name: "Chicken Karaage Curry Rice Bowl",
         description: "Crispy fried chicken nuggets served over a bed of rice.",
         price: "$19.25",
-        image: placeholderImages.riceBowl,
+        image: { src: "/menu/chicken-karaage-curry-rice-bowl.jpeg", alt: "Chicken Karaage Curry Rice Bowl", credit: "Restaurant's own Uber Eats listing photo" },
       },
       {
         id: "chicken-katsu-curry-rice-bowl",
         name: "Chicken Katsu Curry Rice Bowl",
         description: "Japanese-style deep-fried chicken cutlet served with curry sauce.",
         price: "$19.25",
-        image: placeholderImages.riceBowl,
+        image: { src: "/menu/chicken-katsu-curry-rice-bowl.jpeg", alt: "Chicken Katsu Curry Rice Bowl", credit: "Restaurant's own Uber Eats listing photo" },
       },
       {
         id: "grilled-beef-rice-bowl",
@@ -46,7 +46,7 @@ export const menu: MenuCategory[] = [
         description: "Grilled sliced beef over rice, finished with a savoury glaze and served with mixed greens.",
         price: "$20.85",
         tags: ["popular"],
-        image: placeholderImages.riceBowl,
+        image: { src: "/menu/grilled-beef-rice-bowl.jpeg", alt: "Grilled Beef Rice Bowl", credit: "Restaurant's own Uber Eats listing photo" },
         featured: true,
       },
       {
@@ -54,35 +54,35 @@ export const menu: MenuCategory[] = [
         name: "Grilled Chicken Rice Bowl",
         description: "Grilled chicken over white rice with edamame and spinach, finished with sesame seeds and a light sauce.",
         price: "$19.25",
-        image: placeholderImages.riceBowl,
+        image: { src: "/menu/grilled-chicken-rice-bowl.jpeg", alt: "Grilled Chicken Rice Bowl", credit: "Restaurant's own Uber Eats listing photo" },
       },
       {
         id: "beef-burger-steak-rice-bowl",
         name: "Beef Burger Steak Rice Bowl",
         description: "Juicy beef steak served with a side of rice.",
         price: "$20.85",
-        image: placeholderImages.riceBowl,
+        image: { src: "/menu/beef-burger-steak-rice-bowl.jpeg", alt: "Beef Burger Steak Rice Bowl", credit: "Restaurant's own Uber Eats listing photo" },
       },
       {
         id: "chicken-katsu-sauce-rice-bowl",
         name: "Chicken Katsu Sauce Rice Bowl",
         description: "Savoury rice bowl with a rich Katsu sauce.",
         price: "$19.25",
-        image: placeholderImages.riceBowl,
+        image: { src: "/menu/chicken-katsu-sauce-rice-bowl.jpeg", alt: "Chicken Katsu Sauce Rice Bowl", credit: "Restaurant's own Uber Eats listing photo" },
       },
       {
         id: "chicken-karaage-sauce-rice-bowl",
         name: "Chicken Karaage Sauce Rice Bowl",
         description: "Japanese-style fried chicken karaage over steamed rice, drizzled with karaage sauce and mayo.",
         price: "$19.25",
-        image: placeholderImages.riceBowl,
+        image: { src: "/menu/chicken-karaage-sauce-rice-bowl.jpeg", alt: "Chicken Karaage Sauce Rice Bowl", credit: "Restaurant's own Uber Eats listing photo" },
       },
       {
         id: "daily-bento",
         name: "Daily Bento",
         description: "Chef's choice bento — contents vary day to day.",
         price: "$16.25",
-        image: placeholderImages.riceBowl,
+        image: { src: "/menu/daily-bento.jpeg", alt: "Daily Bento", credit: "Restaurant's own Uber Eats listing photo" },
       },
       {
         id: "veg-tofu-rice-bowl",
@@ -90,7 +90,7 @@ export const menu: MenuCategory[] = [
         description: "Tofu, korokke, and daily salad over rice.",
         price: "$15.58",
         tags: ["veg"],
-        image: placeholderImages.riceBowl,
+        image: { src: "/menu/veg-tofu-rice-bowl.jpeg", alt: "VEG Tofu Rice Bowl", credit: "Restaurant's own Uber Eats listing photo" },
       },
     ],
   },
@@ -104,7 +104,7 @@ export const menu: MenuCategory[] = [
         description: "Thinly sliced fish served in a savory soup.",
         price: "$17.58",
         tags: ["popular", "spicy"],
-        image: placeholderImages.hotpot,
+        image: { src: "/menu/spicy-fish-hot-pot.jpeg", alt: "Spicy Fish Hot Pot", credit: "Restaurant's own Uber Eats listing photo" },
         featured: true,
       },
       {
@@ -112,7 +112,7 @@ export const menu: MenuCategory[] = [
         name: "Fish Sour Cabbage Hot Pot",
         description: "Simmering hot pot served with a side of rice.",
         price: "$17.58",
-        image: placeholderImages.hotpot,
+        image: { src: "/menu/fish-sour-cabbage-hot-pot.jpeg", alt: "Fish Sour Cabbage Hot Pot", credit: "Restaurant's own Uber Eats listing photo" },
       },
       {
         id: "spicy-beef-hot-pot",
