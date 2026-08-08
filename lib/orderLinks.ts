@@ -1,9 +1,8 @@
-export type OrderPlatform = "uberEats" | "fantuan";
+export type OrderPlatform = "uberEats";
 
 export const orderLinks: Record<OrderPlatform, string> = {
   uberEats:
     "https://www.ubereats.com/ca/store/plum-garden-%26-chakura/67gwGUrxQkulfOmElLYyiw",
-  fantuan: "https://www.fantuanorder.com/store/plum-garden-chakura/ca-12879",
 };
 
 export const orderPlatformMeta: Record<
@@ -14,11 +13,6 @@ export const orderPlatformMeta: Record<
     label: "Uber Eats",
     accent: "#06C167",
     accentHover: "#049655",
-  },
-  fantuan: {
-    label: "Fantuan",
-    accent: "#FFC300",
-    accentHover: "#E0AC00",
   },
 };
 

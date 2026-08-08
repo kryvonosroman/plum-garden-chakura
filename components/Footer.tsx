@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { hours, siteConfig } from "@/lib/siteConfig";
+import { InstagramIcon } from "@/components/icons";
 
-const socialIcons: { key: keyof typeof siteConfig.social; label: string }[] = [
-  { key: "instagram", label: "Instagram" },
-  { key: "facebook", label: "Facebook" },
-  { key: "tiktok", label: "TikTok" },
-];
+const socialIcons: {
+  key: keyof typeof siteConfig.social;
+  label: string;
+  Icon: typeof InstagramIcon;
+}[] = [{ key: "instagram", label: "Instagram", Icon: InstagramIcon }];
 
 export default function Footer() {
   return (
@@ -29,7 +30,7 @@ export default function Footer() {
           <div className="mt-5 flex gap-3">
             {socialIcons
               .filter(({ key }) => siteConfig.social[key])
-              .map(({ key, label }) => (
+              .map(({ key, label, Icon }) => (
                 <a
                   key={key}
                   href={siteConfig.social[key]}
@@ -38,7 +39,7 @@ export default function Footer() {
                   aria-label={label}
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-cream/30 text-cream/80 transition-colors hover:border-honey hover:text-honey"
                 >
-                  <span className="text-xs font-semibold">{label[0]}</span>
+                  <Icon className="h-4 w-4" />
                 </a>
               ))}
           </div>

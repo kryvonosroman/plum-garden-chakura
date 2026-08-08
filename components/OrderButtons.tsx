@@ -2,22 +2,13 @@
 
 import { orderLinks, orderPlatformMeta, trackOrderClick } from "@/lib/orderLinks";
 import type { OrderPlatform } from "@/lib/orderLinks";
+import { UberEatsIcon } from "@/components/icons";
 
-const platforms: OrderPlatform[] = ["uberEats", "fantuan"];
+const platforms: OrderPlatform[] = ["uberEats"];
 
-export default function OrderButtons({
-  layout = "row",
-}: {
-  layout?: "row" | "stack";
-}) {
+export default function OrderButtons() {
   return (
-    <div
-      className={
-        layout === "row"
-          ? "grid gap-4 sm:grid-cols-2"
-          : "flex flex-col gap-4"
-      }
-    >
+    <div className="flex flex-col gap-4">
       {platforms.map((platform) => {
         const meta = orderPlatformMeta[platform];
         return (
@@ -31,11 +22,11 @@ export default function OrderButtons({
           >
             <span className="flex items-center gap-4">
               <span
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-lg font-bold text-white"
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white"
                 style={{ backgroundColor: meta.accent }}
                 aria-hidden="true"
               >
-                {meta.label[0]}
+                <UberEatsIcon className="h-6 w-6" />
               </span>
               <span>
                 <span className="block font-display text-lg font-semibold text-plum">

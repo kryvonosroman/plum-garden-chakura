@@ -55,5 +55,4 @@ export const siteConfig = {
   },
 };
 
-export const orderNote =
-  "We partner with Uber Eats and Fantuan for delivery and pickup ordering.";
+export const orderNote = "We partner with Uber Eats for delivery and pickup ordering.";

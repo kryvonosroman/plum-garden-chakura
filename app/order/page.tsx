@@ -6,7 +6,7 @@ import { siteConfig, orderNote } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "Order Online",
   description:
-    "Order Plum Garden & CHAKURA for delivery or pickup through Uber Eats or Fantuan, or call ahead for pickup.",
+    "Order Plum Garden & CHAKURA for delivery or pickup through Uber Eats, or call ahead for pickup.",
 };
 
 export default function OrderPage() {
@@ -19,7 +19,7 @@ export default function OrderPage() {
       />
 
       <div className="mt-12">
-        <OrderButtons layout="stack" />
+        <OrderButtons />
       </div>
 
       <p className="mt-8 text-center text-sm text-ink/60">{orderNote}</p>

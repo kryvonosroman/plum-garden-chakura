@@ -8,7 +8,7 @@ import { orderNote } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "Menu",
   description:
-    "Browse rice bowls, noodles, katsu, hotpot, and our bubble tea & fruit tea bar. Order online through Uber Eats or Fantuan.",
+    "Browse rice bowls, noodles, katsu, hotpot, and our bubble tea & fruit tea bar. Order online through Uber Eats.",
 };
 
 export default function MenuPage() {
