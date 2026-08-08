@@ -6,8 +6,9 @@ export type MenuItem = {
   id: string;
   name: string;
   description: string;
-  // TODO: every price below is a placeholder — confirm real prices with the client.
-  price: string;
+  // Real prices haven't been confirmed with the client yet — omit `price`
+  // rather than guess. MenuCard hides the price line when it's unset.
+  price?: string;
   tags?: DietaryTag[];
   image?: (typeof placeholderImages)[keyof typeof placeholderImages];
   featured?: boolean;
@@ -29,7 +30,6 @@ export const menu: MenuCategory[] = [
         name: "Chicken Katsu Sandwich",
         description:
           "Panko-breaded crispy chicken cutlet, shredded cabbage, and katsu sauce on soft milk bread.",
-        price: "$–", // TODO: add real price
         tags: ["popular"],
         image: placeholderImages.katsu,
         featured: true,
@@ -39,7 +39,6 @@ export const menu: MenuCategory[] = [
         name: "Chicken Katsu Plate",
         description:
           "Crispy chicken katsu served over steamed rice with house katsu sauce and pickled sides.",
-        price: "$–", // TODO: add real price
         image: placeholderImages.katsu,
       },
     ],
@@ -53,7 +52,6 @@ export const menu: MenuCategory[] = [
         name: "Karage Don (Crispy Chicken Rice Bowl)",
         description:
           "Japanese-style crispy fried chicken over seasoned rice with house sauce and toppings.",
-        price: "$–", // TODO: add real price
         tags: ["popular"],
         image: placeholderImages.riceBowl,
         featured: true,
@@ -62,7 +60,6 @@ export const menu: MenuCategory[] = [
         id: "teriyaki-chicken-don",
         name: "Teriyaki Chicken Don",
         description: "Grilled teriyaki chicken over rice with seasonal vegetables.",
-        price: "$–", // TODO: add real price
         image: placeholderImages.riceBowl,
       },
     ],
@@ -76,7 +73,6 @@ export const menu: MenuCategory[] = [
         name: "Spicy Steamed Chicken Stirred Noodles",
         description:
           "Stir-fried noodles tossed with steamed chicken in a spicy house sauce.",
-        price: "$–", // TODO: add real price
         tags: ["spicy", "popular"],
         image: placeholderImages.stirFryNoodles,
         featured: true,
@@ -85,7 +81,6 @@ export const menu: MenuCategory[] = [
         id: "veggie-stirred-noodles",
         name: "Veggie Stirred Noodles",
         description: "Stir-fried noodles with a seasonal mix of fresh vegetables.",
-        price: "$–", // TODO: add real price
         tags: ["veg"],
         image: placeholderImages.stirFryNoodles,
       },
@@ -98,9 +93,9 @@ export const menu: MenuCategory[] = [
       {
         id: "signature-hotpot",
         name: "Signature Hotpot",
+        // Broth flavors and included ingredients still need confirming with the client.
         description:
-          "A simmering hotpot with a rotating selection of meats, seafood, and vegetables. TODO: confirm broth flavors and included ingredients.",
-        price: "$–", // TODO: add real price
+          "A simmering hotpot with a rotating selection of meats, seafood, and vegetables.",
         image: placeholderImages.hotpot,
         featured: true,
       },
@@ -115,7 +110,6 @@ export const menu: MenuCategory[] = [
         name: "Brown Sugar Pearl Milk Tea with Cheese Foam",
         description:
           "Brown sugar milk tea with chewy tapioca pearls, topped with a savory-sweet cheese foam.",
-        price: "$–", // TODO: add real price
         tags: ["popular"],
         image: placeholderImages.bubbleTea,
         featured: true,
@@ -123,9 +117,8 @@ export const menu: MenuCategory[] = [
       {
         id: "fresh-fruit-tea",
         name: "Fresh Fruit Tea",
-        description:
-          "Iced tea loaded with real fruit bits. TODO: list rotating/seasonal fruit tea flavors.",
-        price: "$–", // TODO: add real price
+        // Rotating/seasonal fruit tea flavors still need to be listed out.
+        description: "Iced tea loaded with real fruit bits.",
         tags: ["popular"],
         image: placeholderImages.fruitTea,
         featured: true,
@@ -134,7 +127,6 @@ export const menu: MenuCategory[] = [
         id: "charcoal-oolong-milk-tea",
         name: "Charcoal Oolong Milk Tea with Pearls",
         description: "Roasted charcoal oolong milk tea with chewy tapioca pearls.",
-        price: "$–", // TODO: add real price
         image: placeholderImages.bubbleTea,
         featured: true,
       },
@@ -148,14 +140,12 @@ export const menu: MenuCategory[] = [
         id: "side-edamame",
         name: "Edamame",
         description: "Steamed and lightly salted soybeans.",
-        price: "$–", // TODO: add real price
         tags: ["veg"],
       },
       {
         id: "extra-pearls",
         name: "Extra Tapioca Pearls",
         description: "Add extra chewy tapioca pearls to any tea.",
-        price: "$–", // TODO: add real price
         tags: ["veg"],
       },
     ],

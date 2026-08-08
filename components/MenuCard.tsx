@@ -30,9 +30,11 @@ export default function MenuCard({ item }: { item: MenuItem }) {
       <div className="flex flex-1 flex-col gap-2 p-5">
         <div className="flex items-start justify-between gap-3">
           <h3 className="font-display text-lg font-semibold text-plum">{item.name}</h3>
-          <span className="whitespace-nowrap font-display text-lg font-semibold text-plum-dark">
-            {item.price}
-          </span>
+          {item.price && (
+            <span className="whitespace-nowrap font-display text-lg font-semibold text-plum-dark">
+              {item.price}
+            </span>
+          )}
         </div>
         <p className="text-sm text-ink/70">{item.description}</p>
         {item.tags && item.tags.length > 0 && (

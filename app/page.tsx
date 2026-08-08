@@ -4,12 +4,10 @@ import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
 import MenuCard from "@/components/MenuCard";
 import OrderButtons from "@/components/OrderButtons";
-import Testimonial from "@/components/Testimonial";
 import MapEmbed from "@/components/MapEmbed";
 import HoursTable from "@/components/HoursTable";
 import FadeIn from "@/components/FadeIn";
 import { featuredItems } from "@/data/menu";
-import { testimonials } from "@/data/testimonials";
 import { siteConfig, orderNote } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
@@ -29,12 +27,11 @@ export default function Home() {
             eyebrow="Our story"
             title="A Japanese-style kitchen, paired with a tea bar"
           />
+          {/* Placeholder copy — swap for the client's real story of how the two concepts came together. */}
           <p className="mt-5 text-lg text-ink/70 text-balance">
             Plum Garden brings crispy katsu, rice bowls, noodles, and hotpot
             to Cornerstone Mews, while CHAKURA — our in-house tea bar — pours
-            bubble tea and fresh fruit tea alongside every meal. TODO:
-            replace this placeholder paragraph with the client&apos;s real
-            story of how the two concepts came together.
+            bubble tea and fresh fruit tea alongside every meal.
           </p>
           <Link
             href="/about"
@@ -93,24 +90,12 @@ export default function Home() {
         </FadeIn>
       </section>
 
-      {/* Testimonials */}
-      <section className="bg-plum/5 py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <FadeIn>
-            <SectionHeading eyebrow="What people say" title="Loved near SFU" />
-          </FadeIn>
-          <div className="mt-12 grid gap-6 sm:grid-cols-3">
-            {testimonials.map((t, i) => (
-              <FadeIn key={t.id} delay={i * 0.08}>
-                <Testimonial testimonial={t} />
-              </FadeIn>
-            ))}
-          </div>
-          <p className="mt-6 text-center text-xs text-ink/50">
-            TODO: replace with real Google reviews.
-          </p>
-        </div>
-      </section>
+      {/*
+        Testimonials section is hidden until we have real customer reviews
+        to show — data/testimonials.ts and components/Testimonial.tsx are
+        still here, just wire this section back up once the client
+        provides quotes they're OK publishing.
+      */}
 
       {/* Location + hours */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">

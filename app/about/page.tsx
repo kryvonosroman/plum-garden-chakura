@@ -23,12 +23,11 @@ export default function AboutPage() {
           CHAKURA handles the bubble tea and fresh fruit tea side of the
           house, so there&apos;s something to sip alongside every meal.
         </p>
-        <p className="rounded-xl bg-honey/10 p-4 text-base text-ink/70">
-          TODO: replace this placeholder story with the client&apos;s real
-          account of how Plum Garden &amp; CHAKURA started, who&apos;s behind
-          it, and what makes their approach to Asian fusion food and tea
-          different.
-        </p>
+        {/*
+          Placeholder story above — swap for the client's real account of
+          how Plum Garden & CHAKURA started, who's behind it, and what
+          makes their approach to Asian fusion food and tea different.
+        */}
         <p>
           You&apos;ll find us at Cornerstone Mews, just steps from SFU —
           dine in, grab takeout, order delivery, or swing by for curbside
