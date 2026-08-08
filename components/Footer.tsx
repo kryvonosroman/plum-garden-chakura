@@ -16,11 +16,11 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-2.5">
             <Image
-              src="/logo.jpg"
+              src="/logo-round.png"
               alt="Plum Garden & CHAKURA logo"
               width={32}
               height={32}
-              className="h-8 w-8 rounded-lg ring-1 ring-cream/20"
+              className="h-8 w-8 rounded-full ring-1 ring-cream/20"
             />
             <p className="font-display text-xl font-bold">
               Plum Garden &amp; CHAKURA

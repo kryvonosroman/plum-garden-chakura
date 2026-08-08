@@ -26,11 +26,11 @@ export default function Header() {
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/logo.jpg"
+            src="/logo-round.png"
             alt="Plum Garden & CHAKURA logo"
             width={36}
             height={36}
-            className="h-9 w-9 rounded-lg ring-1 ring-plum/10"
+            className="h-9 w-9 rounded-full ring-1 ring-plum/10"
           />
           <span className="font-display text-xl font-bold text-plum sm:text-2xl">
             Plum Garden <span className="text-matcha-dark">&amp;</span> CHAKURA
