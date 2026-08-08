@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -21,10 +22,19 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <Link
           href="/"
-          className="font-display text-xl font-bold text-plum sm:text-2xl"
+          className="flex items-center gap-2.5"
           onClick={() => setOpen(false)}
         >
-          Plum Garden <span className="text-matcha-dark">&amp;</span> CHAKURA
+          <Image
+            src="/logo.jpg"
+            alt="Plum Garden & CHAKURA logo"
+            width={36}
+            height={36}
+            className="h-9 w-9 rounded-lg ring-1 ring-plum/10"
+          />
+          <span className="font-display text-xl font-bold text-plum sm:text-2xl">
+            Plum Garden <span className="text-matcha-dark">&amp;</span> CHAKURA
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { hours, siteConfig } from "@/lib/siteConfig";
 
 const socialIcons: { key: keyof typeof siteConfig.social; label: string }[] = [
@@ -12,9 +13,18 @@ export default function Footer() {
     <footer className="bg-plum text-cream">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
-          <p className="font-display text-xl font-bold">
-            Plum Garden &amp; CHAKURA
-          </p>
+          <div className="flex items-center gap-2.5">
+            <Image
+              src="/logo.jpg"
+              alt="Plum Garden & CHAKURA logo"
+              width={32}
+              height={32}
+              className="h-8 w-8 rounded-lg ring-1 ring-cream/20"
+            />
+            <p className="font-display text-xl font-bold">
+              Plum Garden &amp; CHAKURA
+            </p>
+          </div>
           <p className="mt-3 max-w-xs text-sm text-cream/75">{siteConfig.description}</p>
           <div className="mt-5 flex gap-3">
             {socialIcons
